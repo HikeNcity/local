@@ -1,4 +1,57 @@
 ---
 label: page
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+  description: title
+- name: text_area
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: text area
+  description: text area
+- name: data
+  type: number
+  label: data
+  description: data
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: tag
+  type: tag_list
+  default: []
+  label: tag
+  description: tag
+- name: list
+  type: list
+  config:
+    use_select: false
+    min: 2
+    max: 3
+  label: list
+  description: list
+- name: block
+  type: blocks
+  label: block
+  template_types: []
+  config:
+    min: 
+    max: 
+  description: block
+- name: include_block
+  type: include
+  config: {}
+  template: page
+  label: include block
+  description: include block
